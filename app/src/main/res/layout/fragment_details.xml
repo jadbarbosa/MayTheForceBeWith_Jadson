@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+                name="detailsViewModel"
+                type="com.example.maytheforcebewith.ui.details.DetailsViewModel" />
+    </data>
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/default_padding"
+            tools:context=".ui.details.DetailsFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+            <TextView
+                    android:id="@+id/txtCharacterName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10sp"
+                    android:text="@{detailsViewModel.personData.name}"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/cbFavorite"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            <CheckBox
+                    android:id="@+id/cbFavorite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="0dp"
+                    android:soundEffectsEnabled="true"
+                    android:text="@string/details_favorite_cb_label"
+                    android:textAlignment="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCharacterName" />
+
+            <TextView
+                    android:id="@+id/lblCharacterHeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/colorPrimary"
+                    android:padding="@dimen/default_padding"
+                    android:text="@string/details_height_label"
+                    android:textAlignment="center"
+                    android:textColor="@color/lightColor"
+                    android:textSize="@dimen/normal_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cbFavorite" />
+
+            <TextView
+                    android:id="@+id/txtCharacterHeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{detailsViewModel.personData.height}"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/normal_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCharacterHeight" />
+
+            <TextView
+                    android:id="@+id/lblCharacterWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/colorPrimary"
+                    android:padding="@dimen/default_padding"
+                    android:text="@string/details_mass_label"
+                    android:textAlignment="center"
+                    android:textColor="@color/lightColor"
+                    android:textSize="@dimen/normal_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCharacterHeight" />
+
+            <TextView
+                    android:id="@+id/txtCharacterWeight"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{detailsViewModel.personData.mass}"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/normal_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCharacterWeight" />
+
+            <TextView
+                    android:id="@+id/lblCharacterHair"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/colorPrimary"
+                    android:padding="@dimen/default_padding"
+                    android:text="@string/details_hair_color_label"
+                    android:textAlignment="center"
+                    android:textColor="@color/lightColor"
+                    android:textSize="@dimen/normal_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCharacterWeight" />
+
+            <TextView
+                    android:id="@+id/txtCharacterHair"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{detailsViewModel.personData.hairColor}"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/normal_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCharacterHair" />
+
+            <TextView
+                    android:id="@+id/lblCharacterSkin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/colorPrimary"
+                    android:padding="@dimen/default_padding"
+                    android:text="@string/details_skin_color_label"
+                    android:textAlignment="center"
+                    android:textColor="@color/lightColor"
+                    android:textSize="@dimen/normal_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCharacterHair" />
+
+            <TextView
+                    android:id="@+id/txtCharacterSkin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{detailsViewModel.personData.skinColor}"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/normal_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCharacterSkin" />
+
+            <TextView
+                    android:id="@+id/lblCharacterEyeColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/colorPrimary"
+                    android:padding="@dimen/default_padding"
+                    android:text="@string/details_eye_color_label"
+                    android:textAlignment="center"
+                    android:textColor="@color/lightColor"
+                    android:textSize="@dimen/normal_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCharacterSkin" />
+
+            <TextView
+                    android:id="@+id/txtCharacterEyeColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{detailsViewModel.personData.eyeColor}"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/normal_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCharacterEyeColor" />
+
+            <TextView
+                    android:id="@+id/lblCharacterBirth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/colorPrimary"
+                    android:padding="@dimen/default_padding"
+                    android:text="@string/details_birth_date_label"
+                    android:textAlignment="center"
+                    android:textColor="@color/lightColor"
+                    android:textSize="@dimen/normal_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCharacterEyeColor" />
+
+            <TextView
+                    android:id="@+id/txtCharacterBirth"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{detailsViewModel.personData.birthYear}"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/normal_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCharacterBirth" />
+
+            <TextView
+                    android:id="@+id/lblCharacterGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/colorPrimary"
+                    android:padding="@dimen/default_padding"
+                    android:text="@string/details_gender_label"
+                    android:textAlignment="center"
+                    android:textColor="@color/lightColor"
+                    android:textSize="@dimen/normal_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCharacterBirth" />
+
+            <TextView
+                    android:id="@+id/txtCharacterGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{detailsViewModel.personData.gender}"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/normal_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCharacterGender" />
+
+            <TextView
+                android:id="@+id/lblCharacterSpecies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:background="@color/colorPrimary"
+                android:padding="@dimen/default_padding"
+                android:text="@string/details_specie_label"
+                android:textAlignment="center"
+                android:textColor="@color/lightColor"
+                android:textSize="@dimen/normal_text_size"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtCharacterGender" />
+
+            <TextView
+                    android:id="@+id/txtCharacterSpecies"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{detailsViewModel.speciesData}"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/normal_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCharacterSpecies" />
+
+            <TextView
+                    android:id="@+id/lblCharacterHomeWorld"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/colorPrimary"
+                    android:padding="@dimen/default_padding"
+                    android:text="@string/details_home_world_label"
+                    android:textAlignment="center"
+                    android:textColor="@color/lightColor"
+                    android:textSize="@dimen/normal_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCharacterSpecies" />
+
+            <TextView
+                    android:id="@+id/txtCharacterHomeWorld"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{detailsViewModel.planetsData.name}"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/normal_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCharacterHomeWorld" />
+
+            <TextView
+                    android:id="@+id/lblCharacterStarship"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:background="@color/colorPrimary"
+                    android:padding="@dimen/default_padding"
+                    android:text="@string/details_starships_label"
+                    android:textAlignment="center"
+                    android:textColor="@color/lightColor"
+                    android:textSize="@dimen/normal_text_size"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtCharacterHomeWorld" />
+
+            <TextView
+                    android:id="@+id/txtCharacterStarship"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@{detailsViewModel.starshipsData}"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/normal_text_size"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lblCharacterStarship" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

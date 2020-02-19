@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MayTheForceBeWith</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="details_favorite_cb_label">Favorite character</string>
+    <string name="details_gender_label">Gender</string>
+    <string name="details_specie_label">Species</string>
+    <string name="details_home_world_label">Home World</string>
+    <string name="details_starships_label">Starships</string>
+    <string name="details_birth_date_label">Birth Date</string>
+    <string name="details_eye_color_label">Eye Color</string>
+    <string name="details_skin_color_label">Skin Color</string>
+    <string name="details_hair_color_label">Hair Color</string>
+    <string name="details_mass_label">Mass</string>
+    <string name="details_height_label">Height</string>
+    <string name="main_search_button">Search More Characters</string>
+</resources>
